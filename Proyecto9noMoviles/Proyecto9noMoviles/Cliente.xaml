@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto9noMoviles.Cliente">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Ingresar Nuevo Cliente" HorizontalOptions="Center"/>
+            <Image Source="https://cdn.icon-icons.com/icons2/20/PNG/256/business_application_addmale_useradd_insert_add_user_client_2312.png"
+               HeightRequest="100" />
+            <Grid Margin="10,0,10,0" Padding="10,10,10,10" RowSpacing="5" ColumnSpacing="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="1.0*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="Nombre"></Label>
+                <Label Grid.Row="1" Grid.Column="0" Text="Apellido"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="Cédula"/>
+                <Label Grid.Row="3" Grid.Column="0" Text="Dirección"/>
+                <Label Grid.Row="4" Grid.Column="0" Text="Celular"/>
+                <Label Grid.Row="5" Grid.Column="0" Text="Telefono"/>
+                <Label Grid.Row="6" Grid.Column="0" Text="Correo"/>
+                <Label Grid.Row="7" Grid.Column="0" Text="Nombre Usuario"/>
+                <Label Grid.Row="8" Grid.Column="0" Text="Password"/>
+                <Entry Grid.Row="0" Grid.Column="1" x:Name="nombre"  />
+                <Entry Grid.Row="1" Grid.Column="1" x:Name="apellido"/>
+                <Entry Grid.Row="2" Grid.Column="1" x:Name="cedula" Keyboard="Numeric" MaxLength="10"/>
+                <Entry Grid.Row="3" Grid.Column="1" x:Name="direccion" />
+                <Entry Grid.Row="4" Grid.Column="1" x:Name="celular" Keyboard="Telephone" MaxLength="10"/>
+                <Entry Grid.Row="5" Grid.Column="1" x:Name="telefono" Keyboard="Telephone" MaxLength="9"/>
+                <Entry Grid.Row="6" Grid.Column="1" x:Name="correo" Keyboard="Email"/>
+                <Entry Grid.Row="7" Grid.Column="1" x:Name="nombreUsuario"/>
+                <Entry Grid.Row="8" Grid.Column="1" x:Name="password" IsPassword="True"/>
+                
+            </Grid>
+            <Button x:Name="btnGuardar" Text="Guardar" Clicked="btnGuardar_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

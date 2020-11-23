@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto9noMoviles.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Reservas canchas deportivas" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Identificate para continuar... " FontSize="Title" Padding="30,10,30,10"/>
+        <Entry x:Name="txtUsuario" Placeholder="Usuario"></Entry>
+        <Entry x:Name="txtPassword" IsPassword="True" Placeholder="Password"></Entry>
+        <Button x:Name="btnLogin" Text="Ingresar" Clicked="btnLogin_Clicked" ></Button> 
+        <Button x:Name="btnCliente" Clicked="btnCliente_Clicked" Text="Registrate: Aqui para ingresar!!!"  FontSize="16" BackgroundColor="Transparent" />
+    </StackLayout>
+
+</ContentPage>

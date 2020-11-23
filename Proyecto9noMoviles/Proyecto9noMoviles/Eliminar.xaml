@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto9noMoviles.Eliminar">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="10" CornerRadius="0">
+                <Label x:Name="lblNombreUsuario" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
+            </Frame>
+            <ListView  x:Name="reservaListView" BackgroundColor="WhiteSmoke" HasUnevenRows="True" ItemSelected="reservaListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Frame HasShadow="True" >
+                                    <StackLayout>
+                                        <Image Source="{Binding ins_url}" HeightRequest="50" />
+                                        <Label Text="{Binding cen_descripcion}" LineBreakMode="NoWrap" FontSize="16" />
+                                        <Label Text="{Binding cen_direccion}" LineBreakMode="NoWrap" FontSize="16" />
+                                        <Label Text="{Binding ins_descripcion}" LineBreakMode="NoWrap" FontSize="16" />
+                                        <Label Text="{Binding res_fecha ,StringFormat='{}{0:MM/dd/yyyy}'}" LineBreakMode="NoWrap" FontSize="16" />
+                                    </StackLayout>
+
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto9noMoviles.Reservas">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="10" CornerRadius="0">
+                <StackLayout>
+                    <Label x:Name="lblNombreUsuario"  LineBreakMode="NoWrap" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
+                    <Label x:Name="lblCentro"  LineBreakMode="NoWrap" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+                </StackLayout>
+            </Frame>
+            <StackLayout>
+                <Label Text="Reserva tu Fecha y Hora"/>
+                <Image HeightRequest="200" x:Name="imgEstadio"/>
+                <DatePicker MinimumDate ="{Binding PropertyMinimumDate}"  MaximumDate = "{Binding PropertyMaximumDate}" Grid.Row="5" Grid.Column="2" x:Name="txtFecha"/>
+                <Entry Placeholder="Hora Inicio" Keyboard="Numeric"  MaxLength="2" x:Name="txtHoraI"/>
+                <Entry Placeholder="Hora Fin" Keyboard="Numeric" MaxLength="2" x:Name="txtHoraF"/>
+                <Button x:Name="btnFecha" Text="Reservar" Clicked="btnFecha_Clicked" />
+            </StackLayout>
+        </StackLayout>
+        
+        
+        
+    </ContentPage.Content>
+</ContentPage>

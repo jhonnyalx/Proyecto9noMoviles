@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto9noMoviles.Centros">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="10" CornerRadius="0">
+                <Label x:Name="lblNombreUsuario" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
+            </Frame>
+            <ListView  x:Name="centroListView" BackgroundColor="WhiteSmoke" HasUnevenRows="True" ItemSelected="centroListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Frame HasShadow="True" >
+                                    <StackLayout>
+                                        <Image Source="https://static.vecteezy.com/system/resources/previews/000/532/431/non_2x/football-field-icon-vector.jpg" HeightRequest="50" />
+                                        <Label Text="{Binding cen_descripcion}" LineBreakMode="NoWrap" FontSize="16" />
+                                        <Label Text="{Binding cen_direccion}" LineBreakMode="NoWrap" FontSize="16" />
+                                    </StackLayout>
+
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
